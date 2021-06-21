@@ -401,8 +401,9 @@ for i in [1, 2, 3]:
     df_all['metric_{}_avg'.format(i)] = df_all.groupby(['video_id', 'time_bin'])['metric_{}'.format(i)].transform('mean')
 
 df_emotion = df_all[['video_id', 'time_bin']+metrics_avg].drop_duplicates()
+
 # plot emotion evolution
-plot_emotion_evolution(df_emotion, compare=None)
+plot_emotion_evolution(df_emotion, metrics=metrics_avg, compare=None)
 
 
 
@@ -410,9 +411,11 @@ plot_emotion_evolution(df_emotion, compare=None)
 df = df_emotion.copy()
 
 ids = set(df['video_id'])
-metrics = ['metric_{}_avg'.format(i) for i in [1, 2, 3]]
+metrics = metrics_avg
 
 df['delta_12'] = df[metrics[0]] - df[metrics[1]]
+df['delta_13'] = df[metrics[0]] - df[metrics[2]]
+
 
 fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(30, 5))
 fig.suptitle("Emotions evolution", fontsize=20)
@@ -426,25 +429,28 @@ for id, ax in zip(ids, [ax1, ax2, ax3]):
 
 
 
-def plot_emotion_evolution(df_input, compare=None):
+def plot_emotion_evolution(df_input, metrics, compare=None):
 
-    """ Plots time evolution of emotions for each video based on a given metric """
+    """ Plots time evolution of emotions for each video """
 
-    df = df_input.copy
+    df = df_input.copy()
 
     ids = set(df['video_id'])
-    metrics = ['metric_{}_avg'.format(i) for i in [1, 2, 3]]
+    num_plots = len(metrics)
 
-    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(30, 5))
-    fig.suptitle("Emotions evolution", fontsize=20)
+    # Plot emot
+    if compare == None:
 
-    for id, ax in zip(ids, [ax1, ax2, ax3]):
-        x = df[df['video_id'] == id].copy()
-        x.plot(x='time_bin', y=metrics, ax=ax)
-        ax.set_title('Video ID: {}'.format(id))
-        ax.axhline(y=0, color='r', linestyle='-')
+        fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(30, 5))
+        fig.suptitle("Emotions evolution", fontsize=20)
 
-    if compare == 'metrics':
+        for id, ax in zip(ids, [ax1, ax2, ax3]):
+            x = df[df['video_id'] == id].copy()
+            x.plot(x='time_bin', y=metrics, ax=ax)
+            ax.set_title('Video ID: {}'.format(id))
+            ax.axhline(y=0, color='r', linestyle='-')
 
-
-    if compare == 'videos':
+    # if compare == 'metrics':
+    #
+    #
+    # if compare == 'videos':
