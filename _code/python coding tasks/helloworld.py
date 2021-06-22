@@ -31,7 +31,8 @@ Pro tips:
 '''
 
 # Write your code here:
-
+def hello(input_string):
+    return f'Hello, {input_string}!'
 
 
 # Do not edit any code below this line!

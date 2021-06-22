@@ -52,7 +52,7 @@ some recordings may be more challenging to “read” for the algorithm.
 Load and process the data as you consider and present a high-level overview of the data provided. Please
 explain the data transformations you made, if any.
 
-### - Question 2: characterizing the audience
+### Question 2: characterizing the audience
 The Data Science team is trying to decide between three difference ways of summarizing the emotional
 reactions of viewers to the videos provided. They propose to compute the features for each available
 frame, and then aggregate them by taking the average for each person.
@@ -65,7 +65,7 @@ The proposed definitions to compute the features per frame are:
 Which are the pros and cons of each definition? Which one would you pick to characterize the audience of
 the provided videos and why? You are also free to propose your own definition if you wish.
 
-### - Question 3: differentiating between videos
+### Question 3: differentiating between videos
 Once you have selected which feature seems the most promising to summarize emotional reactions per
 person, we want to check whether that feature allows us to distinguish between the three videos.
 
