@@ -1,7 +1,6 @@
 import pandas as pd
 import os
 import matplotlib.pyplot as plt
-import numpy as np
 
 
 def data_path(i):
@@ -14,7 +13,7 @@ def data_path(i):
     """
 
     HOME = os.getcwd()
-    return HOME + '/_data/realeyes_dsc_homework_video_{}.csv'.format(i)
+    return HOME + '/_data/dsc_homework_video_{}.csv'.format(i)
 
 
 def data_path_jup(i):
@@ -26,7 +25,7 @@ def data_path_jup(i):
     @return: path to video
     """
 
-    return '../_data/realeyes_dsc_homework_video_{}.csv'.format(i)
+    return '../_data/dsc_homework_video_{}.csv'.format(i)
 
 
 def remove_duplicates(df_input):

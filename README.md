@@ -1,7 +1,11 @@
+## Note
+This test assignment was given to me at the second stage of the interview with one of the EU companies. 
+
+
 # 1. Data Science Homework
 
 ## Background
-The core of Realeyes’ business is interpreting the behavioural connection between consumers and  
+The core business is interpreting the behavioural connection between consumers and  
 products by analysing their emotional reaction to video advertisements. Thus, we record subjects while
 they are watching video advertisements and extract emotional and behavioural data at different levels of
 granularity. Then, the main goal of the Data Science team is to analyse this data to produce insights and
@@ -12,14 +16,14 @@ recorded, data provided is per each captured frame of their face while they watc
 
 ## Data
 
-The files realeyes_dsc_homework_video_X.csv contain all required data for this exercise. Each file
+The files dsc_homework_video_X.csv contain all required data for this exercise. Each file
 contains information for a different video:
  - video_id and subject_id, which allow to pair every subject’s emotional data with the ad video they
 were watching. 
    
  - frame_no, number of the webcam recorded frame for that person.
  - millesecond_from_start, time since the video started playing, in milliseconds, for each frame.
- - The corresponding collection of emotional data assigned to the frame, with one emotion per
+ - the corresponding collection of emotional data assigned to the frame, with one emotion per
 column.
 Emotions
 are
@@ -40,15 +44,7 @@ subject level. Source data also has a video_id, which allows it to be also group
 
 The goal is to answer the following 3 questions, which are a simplification of a typical Data Science task.
 
-Be aware that Realeyes’ existing production code is in Python, so that is the preferred coding language
-for the task, although it is not mandatory. You are free to use external open-source libraries if you wish.
-
 ### Question 1: understanding the data
-Although we try to keep our data as clean as possible, some issues can arise during data storage or data
-loading. Besides, the intrinsic nature of the data poses some challenges. For instance, emotion information
-is automatically produced by an algorithm from facial recordings obtained in live conditions. Therefore,
-some recordings may be more challenging to “read” for the algorithm.
-
 Load and process the data as you consider and present a high-level overview of the data provided. Please
 explain the data transformations you made, if any.
 
@@ -76,28 +72,11 @@ videos are different to each other regarding their emotional reactions?
 
 - Provide explanations, charts and numbers of your findings through the three previous questions.
 - For all analysis that you conduct please provide us with code and results.
-## Recommendations
-**General**
-
-Consider this homework as the opportunity to show us your rigour, coding style, technical skills, knowledge
-and reasoning, your reporting and explanation skills.
-
-Please also note that your submission will be judged solely based on depth and quality, without considering
-the time that you actually invest in this task.
-
-**Coding style guidelines**
-- Python is preferred
-- Build modular and optimised code if possible
-- Try to use an interactive plotting library
-- Document all your functions
-
-
 
 
 # 2. Python Coding Homework (Optional)
 
-This task is not mandatory, although as it was already mentioned Realeyes’ production code is written in
-Python, so Python programming skills are good to have.
+This task is not mandatory, although as it was already mentioned that Python programming skills are good to have.
 
 ## Task
 The following files, available inside the “python coding tasks” folder, contain explanations on the
