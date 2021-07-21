@@ -1,5 +1,7 @@
 /venv/
 /_code/.ipynb_checkpoints/
+/_code/__pycache__
 .idea/
 /realeyes_dsc_homework.pdf
 /_data/
+/Analysis.html

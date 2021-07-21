@@ -1,6 +1,9 @@
 ## Note
 This test assignment was given to me at the second stage of the interview with one of the EU companies. 
 
+The analysis is performed in [Analysis.ipynb](_code/Analysis.ipynb)
+
+
 
 # 1. Data Science Homework
 
